@@ -1,0 +1,15 @@
+{
+  "name": "@hiyoz/sprites-cli",
+  "version": "1.0.0",
+  "description": "雪碧图生成的命令行工具",
+  "repository": "https://github.com/hiyoz/sprites-cli",
+  "bin": {
+    "sprites-cli": "src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^6.2.0",
+    "spritesmith": "^3.4.0"
+  }
+}
