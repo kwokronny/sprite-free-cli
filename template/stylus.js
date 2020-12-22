@@ -14,8 +14,8 @@ module.exports = function (spritesheet) {
       .join("");
   }
   let mainCSS = `
-    @spriteName: "${spritesheet.name}"
-    .@{spriteName}{
+    $spriteName = "${spritesheet.name}"
+    .{$spriteName}{
       display:inline-block;
       vertical-align: middle;
       background-image: url(${spritesheet.image});
