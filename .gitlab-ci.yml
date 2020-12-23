@@ -3,15 +3,13 @@ image: node:12
 stages:
   - publish
 
-generate:
+# 更新npm包
+npm-publish:
   stage: publish
   only:
-    - master
+    - tags
   script:
-    - git config --global user.email "540476284@qq.com"
-    - git config --global user.name "KwokRonny"
-    - echo "更新版本号"
-    - npm version patch
-    - git push
-    - echo "发布"
-    - NPM_TOKEN="$NPM_TOKEN" npm publish 
+    - export GIT_TAG=$(git describe --tags)
+    - echo $GIT_TAG
+    - npm version $GIT_TAG
+    - NPM_TOKEN="$NPM_TOKEN" npm publish
