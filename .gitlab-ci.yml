@@ -10,6 +10,8 @@ generate:
   script:
     - echo "更新版本号"
     - npm version patch
+    - git config --global user.email "540476284@qq.com"
+    - git config --global user.name "KwokRonny"
     - git push
     - echo "发布"
     - NPM_TOKEN="$NPM_TOKEN" npm publish 
