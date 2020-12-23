@@ -14,4 +14,5 @@ npm-publish:
     - export GIT_TAG=$(git describe --tags)
     - echo $GIT_TAG
     - npm version $GIT_TAG
-    - NPM_TOKEN="$NPM_TOKEN" npm publish
+    - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}">.npmrc
+    - npm publish --access public
