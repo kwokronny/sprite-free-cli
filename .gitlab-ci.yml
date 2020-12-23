@@ -9,6 +9,8 @@ npm-publish:
   only:
     - tags
   script:
+    - git config --global user.email "540476284@qq.com"
+    - git config --global user.name "KwokRonny"
     - export GIT_TAG=$(git describe --tags)
     - echo $GIT_TAG
     - npm version $GIT_TAG
