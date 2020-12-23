@@ -1,7 +1,7 @@
 {
   "name": "@hiyoz/sprites-cli",
-  "version": "1.0.0",
-  "description": "雪碧图生成的命令行工具",
+  "version": "1.0.2",
+  "description": "批量生成雪碧图及自定义逻辑生成样式的命令行工具",
   "repository": "https://github.com/hiyoz/sprites-cli",
   "bin": {
     "sprites-cli": "src/index.js"

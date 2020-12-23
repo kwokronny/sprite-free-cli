@@ -7,12 +7,7 @@ stages:
 npm-publish:
   stage: publish
   only:
-    - tags
+    - master
   script:
-    - git config --global user.email "540476284@qq.com"
-    - git config --global user.name "KwokRonny"
-    - export GIT_TAG=$(git describe --tags)
-    - echo $GIT_TAG
-    - npm version $GIT_TAG
     - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}">.npmrc
     - npm publish --access public
