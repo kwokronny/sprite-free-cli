@@ -1,0 +1,15 @@
+image: node:12
+
+stages:
+  - publish
+
+generate:
+  stage: generate
+  only:
+    - master
+  script:
+    - echo "更新版本号"
+    - npm version patch
+    - git push
+    - echo "发布"
+    - NPM_TOKEN="$NPM_TOKEN" npm publish 
