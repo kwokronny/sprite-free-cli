@@ -1,12 +1,13 @@
 {
   "name": "@hiyoz/sprites-cli",
-  "version": "1.0.2",
-  "description": "批量生成雪碧图及自定义逻辑生成样式的命令行工具",
+  "version": "1.0.3",
+  "keywords": ["sprites","plugin","batch","cli"],
+  "description": "雪碧图生成的命令行工具，对范围目录下的特定文件夹批量合成雪碧图，仅需提供 js 处理样式规则生成，无需学习新的模板语言，高度自由化的 JS 逻辑控制生成；默认提供 4 种预处理语言的生成模板。",
   "repository": "https://github.com/hiyoz/sprites-cli",
   "bin": {
     "sprites-cli": "src/index.js"
   },
-  "author": "",
+  "author": "KwokRonny",
   "license": "ISC",
   "dependencies": {
     "commander": "^6.2.0",
