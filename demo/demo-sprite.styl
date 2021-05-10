@@ -1,0 +1,43 @@
+
+$spriteName = 'demo';
+
+.{$spriteName} {
+	position: relative;
+	display: inline-block;
+	font-style: normal;
+	vertical-align: middle;
+	background-image: url('./demo-sprite.png');
+	background-size: ptr(285) ptr(230);
+}
+
+.{$spriteName}-cart {
+	background-position: ptr(0) ptr(-140);
+	width: ptr(46);
+	height: ptr(40);
+}
+...
+.{$spriteName}-tab-cart {
+	background-position: ptr(-112) ptr(-140);
+	width: ptr(46);
+	height: ptr(38);
+}
+
+.van-tabbar-item--active .{$spriteName}-tab-cart {
+	background-position: ptr(-56) ptr(-140);
+	width: ptr(46);
+	height: ptr(38);
+}
+...
+.van-checkbox__icon {
+	@extend .{$spriteName};
+	background-position: ptr(-248) ptr(-98);
+	width: ptr(32);
+	height: ptr(32);
+}
+
+.van-checkbox__icon.van-checkbox__icon--checked {
+	@extend .{$spriteName};
+	background-position: ptr(-248) ptr(-140);
+	width: ptr(32);
+	height: ptr(32);
+}

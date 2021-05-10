@@ -6,7 +6,7 @@ module.exports = function (options) {
   if (!["stylus", "scss", "less"].includes(options.rule)) {
     options.rule = "css";
   }
-  let spritesheet = require("../template/" + options.rule);
+  let spritesheet = require("./template/" + options.rule);
   let watchDir = path.resolve(options.scope);
   let spriteImage = fs.readdirSync(watchDir);
 
