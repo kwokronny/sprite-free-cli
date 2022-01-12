@@ -13,7 +13,7 @@ module.exports = function (spritesheet) {
     spritesCSS = spritesheet.sprites.map((sprite) => {
       return `
         .#{$spriteName}-${sprite.name} {
-          background-position: ${sprite.x}px ${sprite.y}px;
+          background-position: -${sprite.x}px -${sprite.y}px;
           width: ${sprite.width}px;
           height: ${sprite.height}px;
         }

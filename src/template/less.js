@@ -5,7 +5,7 @@ module.exports = function (spritesheet) {
       .map((sprite) => {
         return `
         &-${sprite.name} {
-          background-position: ${sprite.x}px ${sprite.y}px;
+          background-position: -${sprite.x}px -${sprite.y}px;
           width: ${sprite.width}px;
           height: ${sprite.height}px;
         }
